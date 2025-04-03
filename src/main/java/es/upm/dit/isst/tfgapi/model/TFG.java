@@ -1,10 +1,18 @@
 package es.upm.dit.isst.tfgapi.model;
+
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
 import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.DecimalMax;
 import jakarta.validation.constraints.PositiveOrZero;
+import jakarta.validation.constraints.Email;
+
 @Entity
 public class TFG {
     @Id @Email private String alumno;
